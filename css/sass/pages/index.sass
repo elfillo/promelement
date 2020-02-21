@@ -1,0 +1,108 @@
+.index-page
+  &.promo
+    width: 100%
+    display: flex
+    .box
+      &_text
+        width: 100%
+        height: auto
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        max-width: 520px
+        .title
+          width: 100%
+          font-size: 28px
+          font-weight: 700
+          color: $ocean
+          line-height: 34px
+        .desc
+          line-height: 24px
+          color: $grey
+      &_img
+        display: flex
+        justify-content: center
+        width: 100%
+        height: 270px
+        img
+          width: auto
+          height: 100%
+  &.icons
+    width: 100%
+    padding: 22px 0
+    background-color: $ocean
+    .list
+      display: flex
+      justify-content: space-around
+      .icon
+        width: 20%
+        display: flex
+        flex-direction: column
+        align-items: center
+        .img
+          width: 100px
+          height: 100px
+        .text
+          font-size: 13px
+          color: $white
+          text-align: center
+  &.catalog
+    width: 100%
+    .list
+      .product
+        mark.count
+          display: none
+        h2.woocommerce-loop-category__title
+          font-size: 18px
+          line-height: 24px
+          font-weight: 700
+          color: $ocean
+  &.photos
+    width: 100%
+    .title
+      width: 100%
+      margin-bottom: 50px
+      span
+        display: block
+        font-size: 24px
+        line-height: 29px
+        font-weight: 700
+        color: $ocean
+      p
+        font-size: 13px
+        line-height: 17px
+        color: $grey
+    .list
+      width: 100%
+      .index-photo-gallery
+        width: 100%
+        padding-top: 50px
+        padding-bottom: 50px
+        margin-bottom: 50px
+        .swiper-slide
+          background-position: center
+          background-size: cover
+          width: 300px
+          height: 300px
+      .btn
+        display: flex
+        justify-content: center
+  &.clients
+    .list
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+      .item
+        width: auto
+        max-width: 25%
+        height: 61px
+        display: flex
+        align-items: flex-end
+        justify-content: center
+  &.news
+    .list
+      margin-bottom: 50px
+    .btn
+      display: flex
+      justify-content: center

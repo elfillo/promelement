@@ -1,0 +1,22 @@
+@import "../variable"
+@import "../mix"
+
+.button
+  display: block
+  width: fit-content
+  padding: 6px 24px
+  color: $blue
+  border: 2px solid $blue
+  font-size: 12px
+  cursor: pointer
+  &:hover
+    background-color: $blue
+    color: $white
+  &--fill
+    background-color: $blue
+    color: $white !important
+    border: 2px solid $blue
+    &:hover
+      border: 2px solid $blue
+      background-color: $white
+      color: $blue !important

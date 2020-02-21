@@ -1,0 +1,125 @@
+.footer
+  width: 100%
+  padding: 16px 0
+  margin-top: auto
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    .logo
+      width: 278px
+      height: 88px
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      span
+        width: 100%
+        text-align: center
+        font-size: 9px
+        color: $grey
+        font-weight: 700
+        text-transform: uppercase
+      +adaptive($mobile)
+        width: 145px
+        height: 32px
+    .cities
+      position: relative
+      align-self: flex-start
+      span
+        font-size: 13px
+        color: $black
+        border-bottom: dotted
+        cursor: pointer
+      ul
+        background: #fff
+        list-style-type: none
+        z-index: 100
+        padding: 10px 15px
+        border: 1px solid #ccc
+        white-space: nowrap
+        font-size: 13px
+        color: $blue
+        position: absolute
+        top: 35px
+        li
+          margin-bottom: 5px
+          text-decoration: underline
+          &:hover
+            text-decoration: none
+    .contacts
+      font-size: 13px
+      .phone
+        margin-bottom: 10px
+        color: $blue
+      .item
+        display: flex
+        align-items: center
+        .icon
+          width: 20px
+          height: 20px
+          fill: $blue
+          margin-right: 10px
+    .feedback
+      display: flex
+      flex-direction: column
+      .email
+        display: flex
+        align-items: center
+        font-size: 13px
+        color: $blue
+        text-decoration: underline
+        margin-bottom: 10px
+        .icon
+          width: 20px
+          height: 20px
+          fill: $blue
+          margin-right: 10px
+      .callback
+        .button
+          width: 100%
+          text-align: center
+  .nav
+    &_footer
+      width: 100%
+      padding-top: 20px
+      ul
+        display: flex
+        justify-content: space-between
+        align-items: center
+        li
+          font-size: 12px
+          color: $black
+          text-transform: uppercase
+          padding-bottom: 10px
+          transition: 0.3s
+          &:hover
+            color: $blue
+        li.active_footer
+          color: $blue
+  &_form
+    display: flex
+    align-items: center
+    width: 100%
+    height: 523px
+    background-image: url("../img/bottomform.png")
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    .form
+      width: 100%
+      max-width: 580px
+      .title
+        color: $white
+        font-size: 30px
+        margin-bottom: 15px
+      .desc
+        color: $white
+        margin-bottom: 15px
+        font-size: 13px
+      .box
+        width: 100%
+        display: flex
+        justify-content: space-between
+        input
+          width: 48%

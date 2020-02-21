@@ -1,0 +1,158 @@
+@import "../variable"
+
+.shop
+  &--loop
+    display: flex
+    flex-wrap: wrap
+    +adaptive($mobile)
+      justify-content: center
+    li
+      width: 224px
+      margin: 0 5px 20px
+      list-style: none !important
+      .price
+        display: none
+        width: 100%
+        justify-content: center
+        font-size: 30px
+        font-weight: 700
+      h2
+        font-size: 14px
+        font-weight: 400
+        text-align: center
+      mark.count
+        display: none
+  &--single
+    display: flex
+    +adaptive($mobile)
+      flex-direction: column
+    .onsale
+      display: none
+    &-image
+      min-width: 50%
+      margin-right: 5%
+      display: flex
+      flex-wrap: wrap
+      > div
+        overflow: hidden
+        margin-bottom: 5px
+        cursor: pointer
+        flex: 0 0 24%
+        &:first-child
+          flex: 0 0 100%
+          height: 450px
+          margin-right: 0
+          +adaptive($mobile)
+            height: auto
+    &-content
+      h1
+        margin-bottom: 20px
+      .price
+        margin-bottom: 20px
+        font-size: 50px
+      .cart
+        .quantity
+          margin: 10px 0
+        .button
+          margin-bottom: 20px
+    &-related
+      h2
+        text-align: center
+        margin-bottom: 20px
+.container--shop
+  .categories
+    ul.products
+      width: 100%
+      .product
+        margin: 0 5px 20px
+        border: 2px solid $blue
+        color: $blue
+        &:hover
+          border: 2px solid $blue
+          background-color: $blue
+          color: $white
+        img
+          display: none !important
+  .shop-header
+    display: flex
+    .box
+      &_breadcrumbs
+        width: 100%
+        max-width: 70%
+      &_search
+        width: 100%
+        max-width: 30%
+
+
+
+.modal_catalog
+  .form
+    ul
+      li
+        font-size: 13px
+        margin-bottom: 5px
+        .sub-menu
+          padding-left: 15px
+          margin: 5px 0
+.filters
+  display: none
+  +adaptive($mobile)
+    display: block
+  .filter_toggle
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 15px
+    border: 1px solid #c7c7c7
+    font-size: 1rem
+    text-transform: uppercase
+    font-weight: 700
+    .arrow
+      width: 20px
+      height: 20px
+      display: flex
+      align-items: center
+      justify-content: center
+      transform: rotate(-45deg)
+      transition: 0.3s
+      .arrow
+        width: 10px
+
+.toggle_filters
+  overflow: hidden
+  height: 0
+
+
+.page-numbers li
+    list-style: none !important
+    width: 30px
+    height: 30px
+    border: 1px solid $grey
+    border-radius: 4px
+    text-align: center
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-right: 5px
+    line-height: 1
+    .current
+      color: $blue
+
+.woocommerce-pagination
+  .page-numbers
+    display: flex
+    justify-content: center
+
+.woocommerce-breadcrumbw
+  margin-bottom: 50px
+  word-break: break-word
+  +adaptive($mobile)
+    margin: 15px 0
+
+.woocommerce-tabs > ul.tabs, .page-title, .woocommerce-result-count, .woocommerce-ordering
+  display: none
+
+.woocommerce-tabs
+  display: block
+  margin-top: 50px
