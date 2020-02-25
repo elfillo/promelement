@@ -13,6 +13,8 @@
 </head>
 <body>
 <?php require 'parts/views/svg.php'?>
+<?php require 'parts/views/form/callback.php'?>
+<?php require 'parts/views/form/shop.php'?>
 <div class="container">
     <header class="header">
         <a href="/" class="logo">
@@ -49,14 +51,47 @@
                 </svg>
                 <a href="mailto:info@promelement.info">info@promelement.info</a>
             </div>
-            <div class="callback">
+            <div class="callback open-modal--callback">
                 <div class="button">Заказать звонок</div>
             </div>
         </div>
     </header>
-    <nav class="nav nav_main nav_footer">
-	    <?php wp_nav_menu(array('theme_location'=>'Main') );?>
+    <nav class="nav nav_main">
+        <div class="mobile">
+            <span>Меню</span>
+            <div class="burger"><span></span><span></span><span></span></div>
+        </div>
+        <div class="desc_menu">
+	        <?php wp_nav_menu(array('theme_location'=>'Main') );?>
+        </div>
+        <div class="mobile_menu hide_list">
+		    <?php wp_nav_menu(array('theme_location'=>'Main') );?>
+        </div>
     </nav>
 </div>
+<!--<section class="container">
+    <?php
+/*	    dd($_SERVER['REMOTE_ADDR']);
+    */?>
+    <h1>Определить город по IP-адресу (AJAX)</h1>
+    <div>
+        IP-адрес:
+        <input id="ip">
+        <div id="checkIp" class="button">Check IP</div>
+    </div>
+    <pre id="suggestions"></pre>
+</section>
+<style>
+    input#ip {
+        display: inline-flex;
+        width: 50%;
+        font-size: 16px;
+        padding: 4px;
+        border: 1px solid grey;
+    }
+    #checkIp{
+        display: inline-block;
+    }
+</style>-->
 
 

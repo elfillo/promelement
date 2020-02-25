@@ -1,4 +1,4 @@
-function getPostByTag(tag, load_count, all_count, post_type){
+function getPostByTag(tag, load_count, all_count, post_type) {
     $.ajax({
         url: '/wp-admin/admin-ajax.php',
         data: {
@@ -51,7 +51,7 @@ function changeTitle(name, event) {
         $(this).removeClass("active-tag");
     });
     $(event.target).addClass("active-tag");
-    let title = name.length > 0 ? '('+name+')' : '';
+    let title = name.length > 0 ? '(' + name + ')' : '';
     $('.projects--title span').text(title);
 }
 
@@ -83,7 +83,7 @@ function showMorePost(load_count, all_count, post_type, slug = null) {
 
             showMoreBtn.text('Показать еще');
 
-            if(parseInt(ids.length)+parseInt(load_count) >= parseInt(all_count)){
+            if (parseInt(ids.length) + parseInt(load_count) >= parseInt(all_count)) {
                 showMoreBtn.css('display', 'none');
             }
         },
@@ -96,7 +96,7 @@ function showMorePost(load_count, all_count, post_type, slug = null) {
 function drawMorePost(post_type, data) {
     let list = '';
 
-    if(post_type === 'post_blog'){
+    if (post_type === 'post_blog') {
         data.map(item => {
             list += `
                 <div class="item" itemid="${item.id}">
@@ -106,7 +106,7 @@ function drawMorePost(post_type, data) {
 				</div>
             `
         });
-    }else{
+    } else {
         data.map(item => {
             list += `
 				<a href="${item.guid}" class="item" itemid="${item.id}">

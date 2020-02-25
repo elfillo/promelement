@@ -65,4 +65,12 @@ function getSubTotalSum(){
 
 add_action('wp_ajax_nopriv_get_sub_total', 'getSubTotalSum' );
 add_action('wp_ajax_get_sub_total', 'getSubTotalSum' );
+
+function getUserIp(){
+	echo $_SERVER['REMOTE_ADDR'];
+	wp_die();
+}
+
+add_action('wp_ajax_nopriv_get_user_ip', 'getUserIp' );
+add_action('wp_ajax_get_user_ip', 'getUserIp' );
 ?>

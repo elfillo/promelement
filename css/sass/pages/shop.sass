@@ -7,7 +7,7 @@
     +adaptive($mobile)
       justify-content: center
     li
-      width: 224px
+      width: 224px !important
       margin: 0 5px 20px
       list-style: none !important
       .price
@@ -75,13 +75,19 @@
           display: none !important
   .shop-header
     display: flex
+    +adaptive($mobile)
+      flex-direction: column-reverse
     .box
       &_breadcrumbs
         width: 100%
         max-width: 70%
+        +adaptive($mobile)
+          max-width: 100%
       &_search
         width: 100%
         max-width: 30%
+        +adaptive($mobile)
+          max-width: 100%
 
 
 

@@ -15,7 +15,7 @@
 var swiper = new Swiper('.index-photo-gallery', {
     effect: 'coverflow',
     grabCursor: true,
-    //centeredSlides: true,
+    centeredSlides: true,
     slidesPerView: 'auto',
     coverflowEffect: {
         rotate: 50,

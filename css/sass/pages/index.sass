@@ -2,6 +2,8 @@
   &.promo
     width: 100%
     display: flex
+    +adaptive($mobile)
+      flex-direction: column
     .box
       &_text
         width: 100%
@@ -16,14 +18,22 @@
           font-weight: 700
           color: $ocean
           line-height: 34px
+          +adaptive($mobile)
+            font-size: 20px
+            line-height: 24px
+            margin-bottom: 10px
         .desc
           line-height: 24px
           color: $grey
+          +adaptive($mobile)
+            margin-bottom: 10px
       &_img
         display: flex
         justify-content: center
         width: 100%
         height: 270px
+        +adaptive($mobile)
+          display: none
         img
           width: auto
           height: 100%
@@ -34,11 +44,16 @@
     .list
       display: flex
       justify-content: space-around
+      +adaptive($mobile)
+        flex-direction: column
+        align-items: center
       .icon
         width: 20%
         display: flex
         flex-direction: column
         align-items: center
+        +adaptive($mobile)
+          width: 100%
         .img
           width: 100px
           height: 100px
@@ -79,6 +94,10 @@
         padding-top: 50px
         padding-bottom: 50px
         margin-bottom: 50px
+        +adaptive($mobile)
+          padding-top: 0
+          padding-bottom: 0
+          margin-bottom: 10px
         .swiper-slide
           background-position: center
           background-size: cover
@@ -93,6 +112,9 @@
       display: flex
       justify-content: space-between
       align-items: center
+      +adaptive($mobile)
+        flex-direction: column
+        align-items: center
       .item
         width: auto
         max-width: 25%
@@ -100,6 +122,9 @@
         display: flex
         align-items: flex-end
         justify-content: center
+        +adaptive($mobile)
+          max-width: 300px
+          margin-bottom: 10px
   &.news
     .list
       margin-bottom: 50px

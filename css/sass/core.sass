@@ -2,11 +2,13 @@
 @import "parts/header"
 @import "parts/footer"
 @import "parts/form"
+@import "parts/modal"
 
 @import "pages/index"
 @import "pages/default"
 @import "pages/news"
 @import "pages/shop"
+@import "pages/contact"
 
 body
   min-height: 100vh
@@ -43,12 +45,18 @@ body
 
 .dn
   display: none
-
+.i-block
+  display: inline-block
+.hide_list
+  overflow: hidden
+  height: 0
 section
   margin-bottom: 50px !important
   .section-title
     width: 100%
     margin-bottom: 50px
+    +adaptive($mobile)
+      margin-bottom: 10px
     span
       display: block
       font-size: 24px

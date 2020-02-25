@@ -1,21 +1,12 @@
 <div class="footer_form">
     <div class="container">
-        <div class="form">
-            <div class="title">Остались вопросы?</div>
-            <div class="desc">Предоставим максимально быстрый ответ</div>
-            <div class="box">
-                <input type="text" placeholder="Ваше имя *">
-                <input type="text" placeholder="Номер телефона *">
-            </div>
-            <textarea placeholder="Ваш вопрос или комментарий"></textarea>
-            <input type="submit" value="Отправить" class="button button--fill">
-        </div>
+        <?php include 'parts/views/form/footer.php'?>
     </div>
 </div>
 <footer class="footer">
     <div class="container">
         <a href="/" class="logo">
-            <img src="<?php get_uri('img/logo.png')?>" alt="logo">
+            <img src="<?php get_uri('img/logo.png') ?>" alt="logo">
             <span class="text">Трубопроводная арматура, элементы трубопровода</span>
         </a>
         <div class="cities">
@@ -48,14 +39,14 @@
                 </svg>
                 <a href="mailto:info@promelement.info">info@promelement.info</a>
             </div>
-            <div class="callback">
+            <div class="callback open-modal--callback">
                 <div class="button">Заказать звонок</div>
             </div>
         </div>
     </div>
     <div class="container">
         <nav class="nav nav_footer">
-		    <?php wp_nav_menu(array('theme_location'=>'Main') );?>
+			<?php wp_nav_menu(array('theme_location' => 'Main')); ?>
         </nav>
     </div>
 </footer>

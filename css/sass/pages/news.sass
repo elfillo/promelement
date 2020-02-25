@@ -13,6 +13,8 @@
         width: 100%
         height: 240px
         overflow: hidden
+        +adaptive($mobile)
+          height: 140px
       .title
         width: auto
         max-width: 80%
@@ -26,6 +28,10 @@
         position: absolute
         left: 0
         bottom: -23px
+        +cutText(2)
+        +adaptive($mobile)
+          max-width: 70%
+          line-height: 19px
       .link
         display: block
         font-size: 13px
