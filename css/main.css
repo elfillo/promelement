@@ -149,9 +149,6 @@
     .nav_main {
       margin-bottom: 0; } }
   .nav_main .mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -160,7 +157,13 @@
     color: #333333;
     padding: 10px 0;
     border-bottom: 1px solid #333333;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    display: none; }
+    @media screen and (max-width: 1171px) {
+      .nav_main .mobile {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
     .nav_main .mobile .burger {
       width: 20px;
       height: 20px;
